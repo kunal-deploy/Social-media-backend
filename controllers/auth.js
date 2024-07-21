@@ -20,7 +20,7 @@ export const register = async (req, res) => {
     const salt = await bcrypt.genSalt(); // getting a random salt from bcrypt to hash the password 
     const passwordHash = await bcrypt.hash(password, salt);// using salt received from above for hashing and thus encrypting the password
     // console.log("here2");
-
+    picturePath = "tmp/" + picturePath
     const newUser = new User({
       firstName,
       lastName,
